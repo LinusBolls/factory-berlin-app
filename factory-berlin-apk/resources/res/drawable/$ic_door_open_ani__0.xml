@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:name="vector" android:height="34dp" android:width="34dp" android:viewportWidth="34" android:viewportHeight="34">
+    <group android:name="group">
+        <path android:name="path_1" android:fillColor="#ffffff" android:pathData="M 10.92 10 L 10.92 34 L 8 34 L 8 7 L 26 7 L 26 34 L 23.08 34 L 23.08 10 Z" android:fillAlpha="0.3"/>
+        <path android:name="path_2" android:fillColor="#ffffff" android:pathData="M 8 34 L 16.76 30.53 L 16.76 0 L 8 6.95 Z"/>
+    </group>
+</vector>

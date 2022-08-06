@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/main_navigation">
+    <action android:id="@+id/toDoorFragment" app:destination="@+id/doorFragment" app:popUpTo="@+id/main_navigation"/>
+    <action android:id="@+id/toLockerFragment" app:destination="@+id/lockerContainerFragment" app:popUpTo="@+id/main_navigation"/>
+    <action android:id="@+id/toNotificationFragment" app:destination="@+id/notificationFragment" app:popUpTo="@+id/main_navigation"/>
+    <action android:id="@+id/toRoomsFragment" app:destination="@+id/booking_nav_graph" app:popUpTo="@+id/main_navigation"/>
+    <action android:id="@+id/toNoiiseFragment" app:destination="@+id/noiise_nav_graph" app:popUpTo="@+id/main_navigation">
+        <argument android:name="oauthId" app:argType="string"/>
+        <argument android:name="baseUrl" app:argType="string"/>
+    </action>
+    <action android:id="@+id/toSpaceOverviewFragment" app:destination="@+id/spaceOverviewFragment" app:popUpTo="@+id/main_navigation"/>
+    <action android:id="@+id/toSettingsFragment" app:destination="@+id/settingsFragment"/>
+    <action android:id="@+id/toQrCodeFragment" app:destination="@+id/qrcode_nav_graph"/>
+    <action android:id="@+id/toAlarmFragment" app:destination="@+id/alarmFragment" app:popUpTo="@+id/main_navigation"/>
+    <action android:id="@+id/toWebViewFragment" app:destination="@+id/webviewFragment" app:popUpTo="@+id/main_navigation"/>
+    <action android:id="@+id/toOpenDoorFragment" app:destination="@+id/openDoorFragment"/>
+    <action android:id="@+id/toLockerError" app:destination="@+id/lockerErrorFragment" app:popUpTo="@+id/lockerContainerFragment"/>
+    <fragment android:label="DoorFragment" android:name="com.sensorberg.smartworkspace.app.screens.door.NearbyContainerFragment" android:id="@+id/doorFragment"/>
+    <fragment android:label="LockerContainerFragment" android:name="com.sensorberg.smartworkspace.app.screens.locker.LockerContainerFragment" android:id="@+id/lockerContainerFragment">
+        <action android:id="@+id/toLockerCreateBookingFragment" app:destination="@+id/lockerCreateBookingFragment"/>
+        <action android:id="@+id/toLockerGroupSelectionFragment" app:destination="@+id/lockerGroupSelectionFragment"/>
+        <action android:id="@+id/toLockerOpeningFragment" app:destination="@+id/lockerOpeningFragment"/>
+    </fragment>
+    <fragment android:label="InfoFragment" android:name="com.sensorberg.smartworkspace.app.screens.info.InfoFragment" android:id="@+id/notificationFragment"/>
+    <fragment android:label="WebviewFragment" android:name="com.sensorberg.smartworkspace.app.screens.webview.WebViewFragment" android:id="@+id/webviewFragment">
+        <argument android:name="url" app:argType="string"/>
+    </fragment>
+    <fragment android:label="SpacesFragment" android:name="com.sensorberg.smartworkspace.app.screens.spaces.overview.SpacesOverviewFragment" android:id="@+id/spaceOverviewFragment">
+        <action android:id="@+id/toSpaceDetailFragment" app:destination="@+id/spaceDetailFragment"/>
+    </fragment>
+    <fragment android:label="SpaceDetailFragment" android:name="com.sensorberg.smartworkspace.app.screens.spaces.detail.SpaceDetailFragment" android:id="@+id/spaceDetailFragment">
+        <action android:id="@+id/toIotDeviceDetailsFragment" app:destination="@+id/iotDeviceDetailsFragment"/>
+        <argument android:name="id" app:argType="string"/>
+        <argument android:name="name" app:argType="string" app:nullable="true"/>
+    </fragment>
+    <fragment android:label="IotDeviceDetailsFragment" android:name="com.sensorberg.smartworkspace.app.screens.spaces.iotdetails.IotDeviceDetailsFragment" android:id="@+id/iotDeviceDetailsFragment">
+        <argument android:name="id" app:argType="string"/>
+        <argument android:name="name" app:argType="string" app:nullable="true"/>
+        <argument android:name="type" app:argType="com.sensorberg.smartworkspace.app.screens.spaces.IotDeviceIdentifier"/>
+    </fragment>
+    <fragment android:label="SettingsFragment" android:name="com.sensorberg.smartworkspace.app.screens.settings.SettingsFragment" android:id="@+id/settingsFragment">
+        <action android:id="@+id/to_changePasswordFragment" app:destination="@+id/changePasswordFragment"/>
+        <action android:id="@+id/to_setMyRenzCredentialsFragment" app:destination="@+id/setMyRenzCredentialsFragment"/>
+        <action android:id="@+id/to_DebugFragment" app:destination="@+id/debugFragment"/>
+    </fragment>
+    <fragment android:label="OpenDoorFragment" android:name="com.sensorberg.smartworkspace.app.screens.door.opening.OpenDoorFragment" android:id="@+id/openDoorFragment">
+        <argument android:name="openable" app:argType="com.sensorberg.smartspaces.sdk.model.Openable" app:nullable="true"/>
+        <argument android:name="unitId" app:argType="string" app:nullable="true"/>
+    </fragment>
+    <fragment android:label="LockerGroupSelectionFragment" android:name="com.sensorberg.smartworkspace.app.screens.locker.selection.LockerGroupSelectionFragment" android:id="@+id/lockerGroupSelectionFragment"/>
+    <fragment android:label="NoLockerAvailableFragment" android:name="com.sensorberg.smartworkspace.app.screens.locker.unavailable.NoLockerAvailableFragment" android:id="@+id/noLockerAvailableFragment">
+        <action android:id="@+id/to_lockerGroupSelectionFragment" app:destination="@+id/lockerGroupSelectionFragment"/>
+    </fragment>
+    <fragment android:label="LockerCreateBookingFragment" android:name="com.sensorberg.smartworkspace.app.screens.locker.create.LockerCreateBookingFragment" android:id="@+id/lockerCreateBookingFragment">
+        <action android:id="@+id/to_lockerOpeningFragment" app:destination="@+id/lockerOpeningFragment" app:popUpTo="@+id/lockerContainerFragment"/>
+        <action android:id="@+id/to_noLockerAvailableFragment" app:destination="@+id/noLockerAvailableFragment" app:popUpTo="@+id/lockerContainerFragment"/>
+        <argument android:name="groupSelection" app:argType="com.sensorberg.smartworkspace.app.screens.locker.LockerGroupSelection" app:nullable="true"/>
+        <argument android:name="iotUnit" app:argType="com.sensorberg.smartspaces.sdk.model.IotUnit" app:nullable="true"/>
+    </fragment>
+    <fragment android:label="LockerOpeningFragment" android:name="com.sensorberg.smartworkspace.app.screens.locker.opening.LockerOpeningFragment" android:id="@+id/lockerOpeningFragment">
+        <action android:id="@+id/to_lockerEndingFragment" app:destination="@+id/lockerEndingFragment" app:popUpTo="@+id/lockerContainerFragment"/>
+        <argument android:name="iotUnit" app:argType="com.sensorberg.smartspaces.sdk.model.IotUnit"/>
+        <argument android:name="endUsage" app:argType="boolean"/>
+    </fragment>
+    <fragment android:label="LockerErrorFragment" android:name="com.sensorberg.smartworkspace.app.screens.locker.error.LockerErrorFragment" android:id="@+id/lockerErrorFragment">
+        <action android:id="@+id/to_lockerCreateBookingFragment" app:destination="@+id/lockerCreateBookingFragment" app:popUpTo="@+id/lockerContainerFragment"/>
+        <action android:id="@+id/to_lockerOpeningFragment" app:destination="@+id/lockerOpeningFragment" app:popUpTo="@+id/lockerContainerFragment"/>
+        <action android:id="@+id/to_lockerEndingFragment" app:destination="@+id/lockerEndingFragment" app:popUpTo="@+id/lockerContainerFragment"/>
+        <argument android:name="args" app:argType="com.sensorberg.smartworkspace.app.screens.locker.error.LockerErrorFragment$Arguments"/>
+    </fragment>
+    <fragment android:label="LockerEndedFragment" android:name="com.sensorberg.smartworkspace.app.screens.locker.delete.LockerDeletedBookingFragment" android:id="@+id/lockerEndedFragment">
+        <action android:id="@+id/to_lockerCreateBookingFragment" app:destination="@+id/lockerCreateBookingFragment" app:popUpTo="@+id/lockerContainerFragment"/>
+        <argument android:name="iotUnit" app:argType="com.sensorberg.smartspaces.sdk.model.IotUnit"/>
+    </fragment>
+    <fragment android:label="ChangePasswordFragment" android:name="com.sensorberg.smartworkspace.app.screens.password.ChangePasswordFragment" android:id="@+id/changePasswordFragment"/>
+    <fragment android:label="SetMyRenzCredentialsFragment" android:name="com.sensorberg.smartworkspace.app.screens.settings.myrenz.SetMyRenzCredentialsFragment" android:id="@+id/setMyRenzCredentialsFragment"/>
+    <fragment android:label="DebugFragment" android:name="com.sensorberg.debug.DebugFragment" android:id="@+id/debugFragment"/>
+    <fragment android:label="LockerEndingFragment" android:name="com.sensorberg.smartworkspace.app.screens.locker.delete.LockerDeleteBookingFragment" android:id="@+id/lockerEndingFragment">
+        <action android:id="@+id/to_lockerEndedFragment" app:destination="@+id/lockerEndedFragment" app:popUpTo="@+id/lockerContainerFragment"/>
+    </fragment>
+    <fragment android:label="AlarmFragment" android:name="com.sensorberg.smartworkspace.app.screens.alarm.AlarmFragment" android:id="@+id/alarmFragment">
+        <argument android:name="itemId" app:argType="string" app:nullable="true"/>
+    </fragment>
+    <fragment android:label="NoiiseFragment" android:name="com.sensorberg.noiise.NoiiseFragment" android:id="@+id/noiiseFragment"/>
+    <include app:graph="@navigation/booking_nav_graph"/>
+    <include app:graph="@navigation/qrcode_nav_graph"/>
+    <include app:graph="@navigation/noiise_nav_graph"/>
+</navigation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/button_corner_radius"/>
+            <stroke android:width="@dimen/button_stroke_width" android:color="@color/colorButtonSecondaryBackgroundDisabled"/>
+        </shape>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <ripple android:color="@color/colorButtonRipple"/>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/button_corner_radius"/>
+                    <stroke android:width="@dimen/button_stroke_width" android:color="@color/colorButtonSecondaryBackground"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

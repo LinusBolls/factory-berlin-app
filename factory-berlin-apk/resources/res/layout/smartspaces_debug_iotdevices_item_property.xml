@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="?attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+    <View android:background="?android:attr/colorPrimaryDark" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginBottom="2dp"/>
+    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/smartspacesIotDevicePropertyName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2dp"/>
+    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/smartspacesIotDevicePropertyAccess" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2dp"/>
+    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/smartspacesIotDevicePropertyValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp"/>
+</LinearLayout>

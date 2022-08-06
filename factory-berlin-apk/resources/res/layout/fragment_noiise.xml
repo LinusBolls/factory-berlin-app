@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent" android:animateLayoutChanges="true">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@+id/retryButton" android:layout_width="wrap_content" android:layout_height="60dp" android:minWidth="180dp" android:text="@string/action_retry" android:paddingStart="24dp" android:paddingEnd="24dp" style="@style/Button"/>
+        <TextView android:textColor="@color/primary" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="48dp" android:text="@string/label_webview_load_fail" style="@style/Text.H4"/>
+    </LinearLayout>
+    <WebView android:id="@+id/webview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="48dp"/>
+    <com.sensorberg.smartworkspace.app.widgets.BlockingProgressBar android:id="@+id/loading" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</FrameLayout>

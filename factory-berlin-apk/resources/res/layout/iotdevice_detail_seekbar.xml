@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textColor="@color/primary" android:id="@+id/iotdevice_seekbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2dp" style="Text.Paragraph_big"/>
+    <com.sensorberg.smartworkspace.app.widgets.CaptionedSeekBar android:id="@+id/iotdevice_seekbar_seekbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="0dp" android:paddingEnd="0dp"/>
+</merge>

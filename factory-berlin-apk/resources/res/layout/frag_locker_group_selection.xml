@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:tag="layout/frag_locker_group_selection_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textColor="@color/onPrimary" android:gravity="center_vertical" android:id="@+id/loginError" android:tag="binding_1" android:background="@color/error" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:text="@string/error_message_bluetooth" android:paddingStart="12dp" android:paddingEnd="12dp" style="@style/Text.Paragraph"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <include android:id="@+id/locker_error" layout="@layout/frag_locker_error"/>
+</LinearLayout>

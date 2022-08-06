@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="240dp" android:width="240dp" android:viewportWidth="240" android:viewportHeight="240">
+    <item android:top="20dp">
+        <shape>
+            <gradient android:startColor="#66333333" android:endColor="#00333333" android:angle="0" android:type="radial" android:gradientRadius="120dp" android:centerColor="#66333333"/>
+        </shape>
+    </item>
+    <item>
+        <vector android:height="240dp" android:width="240dp" android:viewportWidth="240" android:viewportHeight="240">
+            <path android:fillColor="#4d5054" android:pathData="M31.5,120a88.5,88.5 0 0,1 177,0a88.5,88.5 0 0,1 -177,0z" android:strokeColor="#7d7f82" android:strokeWidth="7"/>
+            <path android:fillColor="#45474a" android:pathData="M96.1 96.56h56.8v11.64H96.1V96.56zm0 23.27h33.56v11.63H96.1v-11.63zm0 21.97h11.62v11.64H96.1V141.8z"/>
+        </vector>
+    </item>
+</layer-list>

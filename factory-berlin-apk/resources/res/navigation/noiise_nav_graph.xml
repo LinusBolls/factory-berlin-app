@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/noiise_nav_graph" app:startDestination="@+id/noiiseFragment">
+    <fragment android:label="NoiiseFragment" android:name="com.sensorberg.noiise.NoiiseFragment" android:id="@+id/noiiseFragment">
+        <argument android:name="oauthId" app:argType="string"/>
+        <argument android:name="baseUrl" app:argType="string"/>
+    </fragment>
+</navigation>

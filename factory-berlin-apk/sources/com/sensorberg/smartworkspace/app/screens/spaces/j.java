@@ -1,0 +1,19 @@
+package com.sensorberg.smartworkspace.app.screens.spaces;
+
+import com.sensorberg.smartworkspace.app.screens.spaces.b;
+
+public final /* synthetic */ class j {
+    public static final /* synthetic */ int[] a;
+    public static final /* synthetic */ int[] b;
+
+    static {
+        int[] iArr = new int[b.j.a.values().length];
+        a = iArr;
+        iArr[b.j.a.OPEN.ordinal()] = 1;
+        a[b.j.a.CLOSED.ordinal()] = 2;
+        int[] iArr2 = new int[b.j.a.values().length];
+        b = iArr2;
+        iArr2[b.j.a.OPEN.ordinal()] = 1;
+        b[b.j.a.CLOSED.ordinal()] = 2;
+    }
+}

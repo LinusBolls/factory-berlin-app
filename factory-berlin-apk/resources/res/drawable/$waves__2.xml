@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@android:anim/linear_interpolator" android:duration="800" android:repeatCount="infinite" android:valueFrom="0" android:valueTo="0.4" android:valueType="floatType" android:propertyName="strokeAlpha"/>
+    <objectAnimator android:interpolator="@android:anim/linear_interpolator" android:duration="800" android:repeatCount="infinite" android:valueFrom="M 120 1 C 54.278 1 1 54.278 1 120 C 1 185.722 54.278 239 120 239 C 185.722 239 239 185.722 239 120 C 239 54.278 185.722 1 120 1 Z" android:valueTo="M 119 13 C 60.458 13 13 60.458 13 119 C 13 177.542 60.458 225 119 225 C 177.542 225 225 177.542 225 119 C 225 60.458 177.542 13 119 13 Z" android:valueType="pathType" android:propertyName="pathData"/>
+</set>

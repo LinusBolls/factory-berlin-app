@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="lock_timeout_options">
+        <item>Immer</item>
+        <item>nach 30 Sekunden</item>
+        <item>nach einer Minute</item>
+        <item>nach 3 Minuten</item>
+        <item>nach 5 Minuten</item>
+        <item>nach 10 Minuten</item>
+    </array>
+</resources>

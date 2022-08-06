@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lock_timeout_option_minutes">
+        <item quantity="one">nach %s Minute</item>
+        <item quantity="other">Nach %s Minuten</item>
+    </plurals>
+    <plurals name="lock_timeout_option_seconds">
+        <item quantity="one">nach %s Sekunde</item>
+        <item quantity="other">nach %s Sekunden</item>
+    </plurals>
+</resources>

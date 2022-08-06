@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:tag="layout/activity_login_external_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textColor="@color/onPrimary" android:id="@+id/loginError" android:background="@color/error" android:padding="12dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="8dp" style="@style/Text.Paragraph"/>
+    <com.sensorberg.smartworkspace.app.widgets.BlockingProgressBar android:id="@+id/block" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

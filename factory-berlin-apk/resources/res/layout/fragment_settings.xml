@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button android:gravity="center" android:id="@+id/logout" android:layout_width="160dp" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:text="@string/label_logout" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintVertical_bias="1" style="@style/Button"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/logout" app:layout_constraintTop_toBottomOf="@+id/appbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/username" android:paddingBottom="2dp" style="@style/Settings"/>
+            <TextView android:id="@+id/email" style="@style/Settings.Subtitle"/>
+            <TextView android:id="@+id/pin" android:text="@string/label_pin_reset" style="@style/Settings"/>
+            <TextView android:id="@+id/changePassword" android:text="@string/label_change_password" style="@style/Settings"/>
+            <TextView android:id="@+id/myRenzCredentials" android:text="@string/label_myrenz_credentials" style="@style/Settings"/>
+            <TextView android:id="@+id/feedback" android:text="@string/label_submit_feedback" style="@style/Settings"/>
+            <TextView android:id="@+id/link1" android:visibility="gone" style="@style/Settings"/>
+            <TextView android:id="@+id/link2" android:visibility="gone" style="@style/Settings"/>
+            <TextView android:id="@+id/link3" android:visibility="gone" style="@style/Settings"/>
+            <TextView android:id="@+id/about" android:paddingBottom="2dp" android:text="@string/label_about" style="@style/Settings"/>
+            <TextView android:id="@+id/version" style="@style/Settings.Subtitle"/>
+            <TextView android:id="@+id/debug" android:visibility="gone" android:text="@string/settings_debug_button" style="@style/Settings"/>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appbar" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="?android:attr/actionBarSize" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" app:navigationIcon="@drawable/ic_back" app:title="@string/label_settings_title"/>
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

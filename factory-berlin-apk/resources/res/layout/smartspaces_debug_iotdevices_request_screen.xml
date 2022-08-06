@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="32dp" android:paddingEnd="32dp">
+    <TextView android:id="@+id/smartspacesTitle" style="@style/SmartWorkspaceItemTextMain"/>
+    <TextView android:id="@+id/smartspacesSubtitle" android:layout_marginBottom="16dp" style="@style/SmartWorkspaceItemTextSecond"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/smartspacesButtonRow" android:layout_width="match_parent" android:layout_height="wrap_content" style="?attr/buttonBarStyle">
+        <Button android:id="@+id/smartspacesButtonFalse" android:layout_width="0dp" android:layout_height="60dp" android:text="Off / False" android:layout_weight="1" style="?attr/buttonBarButtonStyle"/>
+        <Button android:id="@+id/smartspacesButtonTrue" android:layout_width="0dp" android:layout_height="60dp" android:text="On / True" android:layout_weight="1" style="?attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+    <SeekBar android:id="@+id/smartspacesSeekBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100" android:minHeight="60dp"/>
+    <Button android:layout_gravity="end" android:id="@+id/smartspacesButtonOk" android:layout_width="wrap_content" android:layout_height="60dp" android:layout_marginTop="16dp" android:paddingStart="64dp" android:paddingEnd="64dp" style="?attr/buttonBarButtonStyle"/>
+</LinearLayout>

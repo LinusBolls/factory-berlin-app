@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/smartspacesAppBar" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/smartspacesToolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:navigationIcon="@drawable/smartspaces_close_inverse"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="?android:attr/windowBackground" android:padding="8dp" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <ImageView android:id="@+id/smartspacesHardwareIcon" android:layout_width="56dp" android:layout_height="56dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/smartSpacesIotUnitDetailsContainer" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:animateLayoutChanges="true" android:layout_marginStart="8dp" android:layout_marginEnd="64dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/smartspacesHardwareIcon" app:layout_constraintTop_toTopOf="0">
+            <TextView android:id="@+id/smartspacesTypes" style="@style/SmartWorkspaceItemTextMain"/>
+            <TextView android:id="@+id/smartspacesBackendUnit" style="@style/SmartWorkspaceItemTextMain"/>
+            <TextView android:id="@+id/smartspacesUnitId" style="@style/SmartWorkspaceItemTextSecond"/>
+            <TextView android:id="@+id/smartspacesActuator" style="@style/SmartWorkspaceItemTextMain"/>
+            <TextView android:id="@+id/smartspacesActuatorId" style="@style/SmartWorkspaceItemTextSecond"/>
+            <TextView android:id="@+id/smartspacesConnection" style="@style/SmartWorkspaceItemTextMain"/>
+            <TextView android:id="@+id/smartspacesRssiValue" style="@style/SmartWorkspaceItemTextSecond"/>
+            <TextView android:id="@+id/smartspacesMessage" style="@style/SmartWorkspaceItemTextMain"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/smartspacesIotUnitBlueIdContainer" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:animateLayoutChanges="true" android:layout_marginStart="8dp" android:layout_marginEnd="64dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/smartspacesHardwareIcon" app:layout_constraintTop_toBottomOf="@+id/smartSpacesIotUnitDetailsContainer">
+            <TextView android:id="@+id/smartspacesHardwareVersion" style="@style/SmartWorkspaceItemTextMain"/>
+            <TextView android:id="@+id/smartspacesFirmwareRevision" style="@style/SmartWorkspaceItemTextMain"/>
+            <TextView android:id="@+id/smartspacesBatteryStatus" style="@style/SmartWorkspaceItemTextMain"/>
+            <Button android:id="@+id/smartSpacesBlueIdDetailsButton" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="24dp" android:text="Get blue-id details" style="@style/SmartWorkspaceButton"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout android:layout_width="48dp" android:layout_height="48dp" android:layout_margin="8dp" android:elevation="32dp" app:layout_anchor="@+id/smartspacesToolbar" app:layout_anchorGravity="800055">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="center" android:id="@+id/smartspacesRssiLevel" android:layout_width="wrap_content" android:layout_height="wrap_content" app:backgroundTint="@color/smartSpacesColorInvert" app:fabSize="1" app:srcCompat="@drawable/smartspaces_signal_bar"/>
+        <ProgressBar android:id="@+id/smartspacesProgress" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:indeterminate="true" android:elevation="32dp"/>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

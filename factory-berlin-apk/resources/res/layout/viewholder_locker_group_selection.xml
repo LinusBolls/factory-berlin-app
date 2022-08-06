@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/shape_space" android:layout_width="match_parent" android:layout_height="@dimen/space_item_height" android:layout_margin="@dimen/space_overview_margin">
+    <TextView android:textColor="@color/colorButtonPrimaryText" android:gravity="center" android:id="@+id/viewholder_locker_group_selection_name" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="12dp" style="@style/Text.H5"/>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:name="vector" android:height="240dp" android:width="240dp" android:viewportWidth="240" android:viewportHeight="240">
+    <path android:name="internal_circle" android:pathData="M 119 13 C 60.458 13 13 60.458 13 119 C 13 177.542 60.458 225 119 225 C 177.542 225 225 177.542 225 119 C 225 60.458 177.542 13 119 13 Z" android:strokeColor="@color/surface" android:strokeWidth="2" android:strokeAlpha="0.2"/>
+    <path android:name="external_circle" android:pathData="M 120 1 C 54.278 1 1 54.278 1 120 C 1 185.722 54.278 239 120 239 C 185.722 239 239 185.722 239 120 C 239 54.278 185.722 1 120 1 Z" android:strokeColor="@color/surface" android:strokeWidth="2" android:strokeAlpha="0.1"/>
+</vector>

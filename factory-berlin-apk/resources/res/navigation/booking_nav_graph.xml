@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/booking_nav_graph" app:startDestination="@+id/roomsFragment">
+    <fragment android:label="RoomsFragment" android:name="com.sensorberg.booking.mybookings.MyBookingsFragment" android:id="@+id/roomsFragment">
+        <action android:id="@+id/to_roomSelectionFragment" app:destination="@+id/roomSelectionFragment"/>
+        <action android:id="@+id/to_roomScheduleFragment" app:destination="@+id/roomScheduleFragment"/>
+    </fragment>
+    <fragment android:label="RoomSelectionFragment" android:name="com.sensorberg.booking.roomselection.RoomSelectionFragment" android:id="@+id/roomSelectionFragment">
+        <action android:id="@+id/to_roomScheduleFragment" app:destination="@+id/roomScheduleFragment"/>
+    </fragment>
+    <fragment android:label="RoomScheduleFragment" android:name="com.sensorberg.booking.roomschedule.RoomScheduleFragment" android:id="@+id/roomScheduleFragment">
+        <argument android:name="startDate" app:argType="org.threeten.bp.LocalDate"/>
+        <argument android:name="unitId" app:argType="string"/>
+        <argument android:name="unitName" app:argType="string"/>
+    </fragment>
+</navigation>

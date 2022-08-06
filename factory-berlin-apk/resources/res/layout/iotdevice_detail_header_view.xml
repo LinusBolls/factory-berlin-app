@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/iotdevice_header_icon" android:layout_width="120dp" android:layout_height="120dp" android:layout_marginTop="?attr/actionBarSize" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <TextView android:textColor="@color/primary" android:id="@+id/iotdevice_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/iotdevice_header_icon" style="@style/Text.H2"/>
+    <View android:id="@+id/iotdevice_header_underline" android:background="@color/primary" android:layout_width="0dp" android:layout_height="1dp" app:layout_constraintEnd_toEndOf="@+id/iotdevice_header_title" app:layout_constraintStart_toStartOf="@+id/iotdevice_header_title" app:layout_constraintTop_toBottomOf="@+id/iotdevice_header_title"/>
+</merge>

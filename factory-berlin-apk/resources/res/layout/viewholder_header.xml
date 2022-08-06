@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textColor="@color/colorButtonPrimaryText" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/viewholder_header_title_textview" android:background="@drawable/shape_space" android:layout_width="150dp" android:layout_height="150dp" android:paddingStart="12dp" android:paddingEnd="12dp" style="@style/Text.H5"/>
+</FrameLayout>

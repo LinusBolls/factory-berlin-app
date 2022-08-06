@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="lock_timeout_options">
+        <item>à chaque fois</item>
+        <item>aprés 30 secondes</item>
+        <item>aprés 1 minute</item>
+        <item>aprés 3 minutes</item>
+        <item>aprés 5 minutes</item>
+        <item>aprés 10 minutes</item>
+    </array>
+</resources>

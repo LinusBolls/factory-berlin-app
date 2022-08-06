@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:interpolator="@android:anim/decelerate_interpolator" android:duration="1750" android:startOffset="1000" android:valueFrom="0.49" android:valueTo="0.22" android:valueType="floatType" android:propertyName="trimPathStart"/>

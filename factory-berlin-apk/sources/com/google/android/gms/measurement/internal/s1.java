@@ -1,0 +1,15 @@
+package com.google.android.gms.measurement.internal;
+
+import com.google.android.gms.internal.measurement.oe;
+
+/* compiled from: com.google.android.gms:play-services-measurement-impl@@17.5.0 */
+final /* synthetic */ class s1 implements p3 {
+    static final p3 a = new s1();
+
+    private s1() {
+    }
+
+    public final Object b() {
+        return Boolean.valueOf(oe.a());
+    }
+}

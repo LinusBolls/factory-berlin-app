@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:gravity="left">
+        <shape android:shape="oval">
+            <size android:height="@dimen/schedule_drawable_diameter" android:width="@dimen/schedule_drawable_diameter"/>
+            <solid android:color="@color/primary"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="line">
+            <stroke android:width="@dimen/schedule_drawable_solid_width" android:color="@color/primary"/>
+        </shape>
+    </item>
+</layer-list>

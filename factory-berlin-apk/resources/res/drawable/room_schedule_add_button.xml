@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <size android:height="48dp" android:width="48dp"/>
+                    <solid android:color="@color/primary"/>
+                </shape>
+            </item>
+            <item android:gravity="center" android:drawable="@drawable/ic_add"/>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <size android:height="48dp" android:width="48dp"/>
+                    <solid android:color="@color/secondary"/>
+                </shape>
+            </item>
+            <item android:gravity="center" android:drawable="@drawable/ic_add"/>
+        </layer-list>
+    </item>
+</selector>

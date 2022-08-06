@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:tag="layout/frag_webview_0" android:layout_width="match_parent" android:layout_height="match_parent" android:animateLayoutChanges="true">
+    <WebView android:id="@+id/webview" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/empty" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/primary" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="48dp" android:text="@string/label_webview_load_fail" style="@style/Text.H4"/>
+        <Button android:id="@+id/retryButton" android:layout_width="wrap_content" android:layout_height="60dp" android:minWidth="180dp" android:text="@string/action_retry" android:paddingStart="24dp" android:paddingEnd="24dp" style="@style/Button"/>
+    </LinearLayout>
+    <com.sensorberg.smartworkspace.app.widgets.BlockingProgressBar android:id="@+id/loading" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

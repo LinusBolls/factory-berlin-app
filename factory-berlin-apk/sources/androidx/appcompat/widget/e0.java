@@ -1,0 +1,102 @@
+package androidx.appcompat.widget;
+
+import android.annotation.SuppressLint;
+import android.graphics.PorterDuff;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.DrawableContainer;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.InsetDrawable;
+import android.graphics.drawable.LayerDrawable;
+import android.graphics.drawable.ScaleDrawable;
+import android.os.Build;
+import androidx.core.graphics.drawable.c;
+
+@SuppressLint({"RestrictedAPI"})
+/* compiled from: DrawableUtils */
+public class e0 {
+    private static final int[] a = {16842912};
+    private static final int[] b = new int[0];
+
+    static {
+        new Rect();
+        if (Build.VERSION.SDK_INT >= 18) {
+            try {
+                Class.forName("android.graphics.Insets");
+            } catch (ClassNotFoundException unused) {
+            }
+        }
+    }
+
+    public static boolean a(Drawable drawable) {
+        if (Build.VERSION.SDK_INT < 15 && (drawable instanceof InsetDrawable)) {
+            return false;
+        }
+        if (Build.VERSION.SDK_INT < 15 && (drawable instanceof GradientDrawable)) {
+            return false;
+        }
+        if (Build.VERSION.SDK_INT < 17 && (drawable instanceof LayerDrawable)) {
+            return false;
+        }
+        if (drawable instanceof DrawableContainer) {
+            Drawable.ConstantState constantState = drawable.getConstantState();
+            if (!(constantState instanceof DrawableContainer.DrawableContainerState)) {
+                return true;
+            }
+            for (Drawable a2 : ((DrawableContainer.DrawableContainerState) constantState).getChildren()) {
+                if (!a(a2)) {
+                    return false;
+                }
+            }
+            return true;
+        } else if (drawable instanceof c) {
+            return a(((c) drawable).b());
+        } else {
+            if (drawable instanceof e.a.l.a.c) {
+                return a(((e.a.l.a.c) drawable).a());
+            }
+            if (drawable instanceof ScaleDrawable) {
+                return a(((ScaleDrawable) drawable).getDrawable());
+            }
+            return true;
+        }
+    }
+
+    static void b(Drawable drawable) {
+        if (Build.VERSION.SDK_INT == 21 && "android.graphics.drawable.VectorDrawable".equals(drawable.getClass().getName())) {
+            c(drawable);
+        }
+    }
+
+    private static void c(Drawable drawable) {
+        int[] state = drawable.getState();
+        if (state == null || state.length == 0) {
+            drawable.setState(a);
+        } else {
+            drawable.setState(b);
+        }
+        drawable.setState(state);
+    }
+
+    public static PorterDuff.Mode d(int i2, PorterDuff.Mode mode) {
+        if (i2 == 3) {
+            return PorterDuff.Mode.SRC_OVER;
+        }
+        if (i2 == 5) {
+            return PorterDuff.Mode.SRC_IN;
+        }
+        if (i2 == 9) {
+            return PorterDuff.Mode.SRC_ATOP;
+        }
+        switch (i2) {
+            case 14:
+                return PorterDuff.Mode.MULTIPLY;
+            case 15:
+                return PorterDuff.Mode.SCREEN;
+            case 16:
+                return PorterDuff.Mode.ADD;
+            default:
+                return mode;
+        }
+    }
+}
